@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}{% endblock %}</title>
+        
+        <link rel="stylesheet" href="{{ asset('css/jquery/jquery-ui.theme.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/bootstrap/bootstrap.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/main.css?v=2') }}" />
+        
+        <script type="text/javascript" src="{{ asset('js/jquery/jquery-1.12.4.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/jquery/jquery-ui.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/bootstrap/bootstrap.min.js') }}"></script>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+               <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">Warehouse</a>
+               </div>
+               <div id="navbar" class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav">
+                     <li><a href="{{ path('warehouse_item_list') }}">Items</a></li>
+                     <li><a href="{{ path('warehouse_screw_list') }}">Screws</a></li>
+                     <li><a href="{{ path('warehouse_isolation_list') }}">Isolation</a></li>
+                  </ul>
+               </div>
+               <!--/.nav-collapse -->
+            </div>
+        </nav>
+                     
+        {% block content %}{% endblock %}
+                 
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

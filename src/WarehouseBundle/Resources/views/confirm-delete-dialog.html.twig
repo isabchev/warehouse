@@ -1,0 +1,39 @@
+{% block javascripts %}
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                Confirm Delete
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete item <span class="bold confirm-delete-item-name"></span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-danger btn-ok">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">    
+    $(document).ready(function () {
+        $('#confirm-delete').on('show.bs.modal', function(e) {
+            $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
+            $(this).find('.confirm-delete-item-name').html($(e.relatedTarget).data('item-name'));
+        });
+
+        $('#check-all-items').change(function () {
+            if ($(this).is(':checked')) {
+                $('.item-checkbox').prop('checked', true);
+            } else {
+                $('.item-checkbox').prop('checked', false);
+            }
+        });
+
+        $('#updated_at_from_filter').datepicker({ dateFormat: 'dd.mm.yy' });
+        $('#updated_at_to_filter').datepicker({ dateFormat: 'dd.mm.yy' });
+        $('#created_at_from_filter').datepicker({ dateFormat: 'dd.mm.yy' });
+        $('#created_at_to_filter').datepicker({ dateFormat: 'dd.mm.yy' });
+    });
+</script>
+{% endblock %}

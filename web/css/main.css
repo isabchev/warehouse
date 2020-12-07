@@ -1,0 +1,72 @@
+textarea {
+    resize: vertical;
+}
+.table.table-list>tbody>tr>td {
+    vertical-align: middle;
+}
+
+.form-add-edit-row {
+    margin-bottom: 15px;
+}
+
+.form-add-edit-row-int {
+    width: 90px;
+}
+
+.from-to-filter-container span,
+.from-to-filter-calendar-container span {
+    width: 40px;
+    display: block;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.from-to-filter-container input {
+    width: 50px;
+}
+
+.from-to-filter-calendar-container input {
+    width: 70px;
+}
+
+.full-width-filter-field {
+    width: 100%;
+}
+
+.from-to-filter-container input,
+.full-width-filter-field,
+.from-to-filter-calendar-container {
+    font-size: 12px;
+}
+
+.auto-width {
+    width: auto;
+}
+
+.clear {
+    clear: both;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.margin-bottom-5 {
+    margin-bottom: 5px;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+.full-width {
+    width: 100%;
+}
