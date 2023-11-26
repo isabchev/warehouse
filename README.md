@@ -1,6 +1,5 @@
 Admin grid example.
 
-Very small part of warehouse project done on symphony 3.4.
+A very small part of the warehouse project done in Symfony 3.4.
 
-Showing warehouse bundle which have abstract class src/WarehouseBundle/Controller/WarehouseControllerAbstract.php
-handling common grid logic like filtaring ordaring, etc and three example controllers which inherit it and add their custom logic
+Showing a warehouse bundle that includes an abstract class, src/WarehouseBundle/Controller/WarehouseControllerAbstract.php, handling common grid logic such as filtering, ordering, etc. There are also three example controllers that inherit from it and add their custom logic.
